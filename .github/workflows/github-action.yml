@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-lastet
     steps:
       - name: Check out the repo
-        uses: docker/build-push-action@v1
-          with:
-            username: ${{ secrets.DOCKER_USERNAME }}
-            password: ${{ secrets.DOCKER_PASSWORD }}
-            repository: manudt/test
-            tag_with_ref: true
+        uses: docker/build-push-action@v1        
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: my-docker-hub-namespace/my-docker-hub-repository
+          tag_with_ref: true
